@@ -27,9 +27,8 @@ function clearLog() {
 document.getElementById('btnFetch').addEventListener('click', () => {
   const cityKey = document.getElementById('citySelect').value;
   const target = CITIES[cityKey];
-  const API_KEY = 'YOUR_API_KEY';
 
-const url = `https://api.openweathermap.org/data/2.5/weather?lat=${target.lat}&lon=${target.lon}&appid=${API_KEY}&units=metric`;
+const url = `/api/weather?lat=${target.lat}&lon=${target.lon}`;
 
   log(`1. fetch() 주문서 발송: ${target.name}`);
   resultCard.classList.add('d-none');
